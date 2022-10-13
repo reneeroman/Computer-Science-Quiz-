@@ -1,0 +1,47 @@
+print("Welcome to my computer quiz")
+#playing - variable input - allows user to start typing something in the console  
+# prompt - what appears before the user start typing and is stored in the variable 
+playing = input("Do you want to play? ") 
+#if statement - allows us to conditionally check / compare values togehter if something is true or false 
+#!= - does not equal to
+# .lower - converts all answers that user types in into lowercase   
+if playing.lower() != "yes":
+    quit()
+
+print("Okay Let's Play :)")
+#score - tell how many answers users got correct 
+score = 0 
+#answer - variable    == - checking if something is equal to something else  
+#if else - if "if" is not true whatever in the else statement will run
+answer = input("What does CPU stand for? ").lower()
+if answer == "central processing unit" :
+    print ('Correct!')
+    score += 1 # increment statement if user get it right add one 
+else: 
+    print ("Incorrect!")
+
+answer = input("What does GPU stand for? ").lower()
+if answer == "graphic processing unit" :
+    print ('Correct!')
+    score += 1
+else: 
+    print ("Incorrect!")
+
+answer = input("What does RAM stand for? ").lower()
+if answer == "random access memory" :
+    print ('Correct!')
+    score += 1
+else: 
+    print ("Incorrect!")
+
+answer = input("Waht does PSU stand for? ").lower()
+if answer == "power supply" :
+    print ('Correct!')
+    score += 1
+else: 
+    print ("Incorrect!")
+
+print("You got " + str(score) + " questions correct !") 
+# score is an interger  so convert score into a string to when added to the other strings it works 
+# e.g int different from string so in order to add two strings would have to convert 
+print("You got " + str((score/4) * 100) + "%")  # in order to find the percentage 
